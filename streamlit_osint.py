@@ -2,6 +2,7 @@ import streamlit as st
 import subprocess
 import os
 
+## If domain is hosted by cloudflare etc, instead of using something like example.com, use the real ip address instead should be good
 def run_command(command):
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
     return result.stdout
